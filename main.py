@@ -9,7 +9,7 @@ app = FastAPI()
 # https://fastapi.tiangolo.com/tutorial/cors/
 allowed_origins = [
     'http://foo.local:8000',
-    # 'http://bar.local:8000',
+    'http://bar.local:8000',
 ]
 
 app.add_middleware(CORSMiddleware,
@@ -17,7 +17,7 @@ app.add_middleware(CORSMiddleware,
     # allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-    max_age=10
+    max_age=10  # caching
 )
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
