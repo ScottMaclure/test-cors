@@ -16,7 +16,7 @@ uvicorn main:app --reload
 
 http://foo.local:8000/static/index.html
 
-Then the XHR will be configured for http://bar.local:8000/static/index.html
+Then the XHR will be configured for http://bar.local:8000/api/v1/renewToken
 
 ## Read More
 
