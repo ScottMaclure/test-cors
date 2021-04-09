@@ -22,7 +22,7 @@
             console.log(`renewToken starting for ${api_endpoint}/api/v1/renewToken`)
             fetch(`${api_endpoint}/api/v1/renewToken`, {
                 method: 'POST',
-                credentials: 'include', // include, *same-origin, omit
+                credentials: 'include', // comment out this line for request to work/break based on cors allow credentials header 
                 headers: {
                     'Authorization': `Bearer ${api_token}`,
                     'Content-Type': 'application/json'

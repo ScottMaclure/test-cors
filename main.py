@@ -8,8 +8,7 @@ app = FastAPI()
 
 # https://fastapi.tiangolo.com/tutorial/cors/
 allowed_origins = [
-    'http://foo.local:8000',
-    'http://bar.local:8000',
+    'http://foo.local:8000'
 ]
 
 app.add_middleware(CORSMiddleware,
