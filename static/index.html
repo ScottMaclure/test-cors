@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test CORS</title>
+</head>
+<body>
+
+    <h1>Testing Cors</h1>
+    <p>TODO make an XHR fetch to /api/v1/renewToken, on a separate local subdomain.</p>
+    <h2>Results</h2>
+    <pre><code id="results">TODO results</code></pre>
+    <button onClick="renewToken()">Renew Token</button>
+
+    <script>
+        const renewToken = () => {
+            console.log('renewToken starting')
+            fetch('/api/v1/renewToken', {method: 'POST'})
+                .then(response => response.json())
+                .then(data => document.getElementById('results').innerText = JSON.stringify(data, null, 2));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renewToken()
+        })
+    </script>
+    
+</body>
+</html>
