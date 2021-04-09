@@ -20,10 +20,9 @@ Then the XHR will be configured for http://bar.local:8000/static/index.html
 ## Read More
 
 Client:
-https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-https://github.com/github/fetch#sending-cookies
+* https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+* https://github.com/github/fetch#sending-cookies
 
 Server:
-https://fastapi.tiangolo.com/tutorial/cors/
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials
-
+* https://fastapi.tiangolo.com/tutorial/cors/
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials
