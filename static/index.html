@@ -15,11 +15,22 @@
     <button onClick="renewToken()">Renew Token</button>
 
     <script>
+        const api_endpoint = '//bar.local:8000' // Browser using http://foo.local:8000/static/index.html
+        const api_token = 'mydummytokenlahlahlah' // Test gibberish
+
         const renewToken = () => {
-            console.log('renewToken starting')
-            fetch('/api/v1/renewToken', {method: 'POST'})
-                .then(response => response.json())
-                .then(data => document.getElementById('results').innerText = JSON.stringify(data, null, 2));
+            console.log(`renewToken starting for ${api_endpoint}/api/v1/renewToken`)
+            fetch(`${api_endpoint}/api/v1/renewToken`, {
+                method: 'POST',
+                credentials: 'include', // include, *same-origin, omit
+                headers: {
+                    'Authorization': `Bearer ${api_token}`,
+                    'Content-Type': 'application/json'
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById('results').innerText = JSON.stringify(data, null, 2));
         }
 
         document.addEventListener('DOMContentLoaded', () => {
