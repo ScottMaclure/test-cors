@@ -10,6 +10,7 @@ Testing cors with Authorization header.
 
 Run
 ```
+pip install --user fastapi[all] aiofiles
 uvicorn main:app --reload
 ```
 
